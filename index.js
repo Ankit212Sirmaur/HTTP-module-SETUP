@@ -21,19 +21,21 @@ const server = http.createServer(function listener(request, response){
 
     if(request.url  == '/home'){
         console.log(request.method);
-        response.end('welcome to home'); 
+        // response.end('welcome to home'); 
         // response.end({msg:'ok'}); ❌❌
         
         /**
-         * to send the data chunk by chunk  using write
+         * to send the data chunk by chunk using write
          */
         response.write('first response');
         response.write('second response');
+        response.write('third response');
+        // and in last u have to complete your respone by end
         response.end('last response');
 
     }
-    response.sendFile(dir)
-    console.log('request received'); 
+    // response.sendFile(dir)
+    // console.log('request received'); 
     
     // send html code or json from this setup
     // ✅

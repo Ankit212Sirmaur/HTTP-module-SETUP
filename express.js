@@ -12,6 +12,11 @@ app.get('/home' , (req, res) =>{
     });
 })
 
+app.post('/about', (req, res) =>{
+    res.send('welcome to post post method');
+    
+})
+
 app.listen(PORT, ()=>{
     console.log(`example app on  listening on port ${PORT}`);
 })
